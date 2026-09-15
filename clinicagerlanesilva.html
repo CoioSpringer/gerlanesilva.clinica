@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Gerlane Silva | Estética Avançada no Recife</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        wine: {
+                            500: '#9E2A46', // Lighter wine/pinkish
+                            600: '#7B1D34', // Main brand color (matched to blouse)
+                            700: '#5C1526', // Darker wine for hover
+                        },
+                        blush: {
+                            50: '#FDF7F8',
+                            100: '#FCECF0', // Soft pink background
+                            200: '#F4D9E1',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for an elegant touch */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FDF7F8;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #7B1D34;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5C1526;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white antialiased">
+
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="font-serif text-2xl md:text-3xl font-bold text-wine-600 flex items-center gap-2">
+                        <i class="fa-solid fa-spa text-xl"></i>
+                        <span>Gerlane Silva</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#sobre" class="text-gray-600 hover:text-wine-600 font-medium transition-colors">Sobre</a>
+                    <a href="#servicos" class="text-gray-600 hover:text-wine-600 font-medium transition-colors">Serviços</a>
+                    <a href="#diferenciais" class="text-gray-600 hover:text-wine-600 font-medium transition-colors">Diferenciais</a>
+                    <a href="#depoimentos" class="text-gray-600 hover:text-wine-600 font-medium transition-colors">Depoimentos</a>
+                    <a href="#contato" class="text-gray-600 hover:text-wine-600 font-medium transition-colors">Contato</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="https://wa.me/5581987273399" target="_blank" class="bg-wine-600 hover:bg-wine-700 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Agendar
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-wine-600 hover:text-wine-700 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#sobre" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-wine-600 hover:bg-blush-50 rounded-md">Sobre</a>
+                <a href="#servicos" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-wine-600 hover:bg-blush-50 rounded-md">Serviços</a>
+                <a href="#diferenciais" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-wine-600 hover:bg-blush-50 rounded-md">Diferenciais</a>
+                <a href="#depoimentos" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-wine-600 hover:bg-blush-50 rounded-md">Depoimentos</a>
+                <a href="#contato" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-wine-600 hover:bg-blush-50 rounded-md">Contato</a>
+                <a href="https://wa.me/5581987273399" target="_blank" class="mt-4 w-full flex justify-center items-center gap-2 bg-wine-600 text-white px-4 py-3 rounded-md font-medium">
+                    <i class="fa-brands fa-whatsapp"></i> Agendar Avaliação
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio" class="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-gradient-to-br from-blush-100 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Hero Text -->
+                <div class="text-center lg:text-left z-10">
+                    <span class="text-wine-600 font-semibold tracking-wider uppercase text-sm mb-4 block">Centro de Saúde e Beleza</span>
+                    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+                        Realçando sua beleza com <span class="text-wine-600 italic">naturalidade</span> e técnica.
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
+                        Bem-vinda à Clínica Gerlane Silva, seu refúgio de estética avançada e bem-estar no coração do Recife. Procedimentos personalizados para resgatar sua melhor versão.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="https://wa.me/5581987273399" target="_blank" class="bg-wine-600 hover:bg-wine-700 text-white px-8 py-4 rounded-full font-medium text-lg transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Agende sua Avaliação
+                        </a>
+                        <a href="#servicos" class="bg-white border-2 border-wine-600 text-wine-600 hover:bg-blush-50 px-8 py-4 rounded-full font-medium text-lg transition-all flex items-center justify-center">
+                            Conhecer Serviços
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="relative mx-auto w-full max-w-md lg:max-w-full z-10">
+                    <!-- Decorative background element -->
+                    <div class="absolute inset-0 bg-wine-600 rounded-tl-[100px] rounded-br-[100px] transform translate-x-4 translate-y-4 opacity-20"></div>
+                    <img src="GERLANE2.png" alt="Gerlane Silva Esteticista" class="relative rounded-tl-[100px] rounded-br-[100px] shadow-2xl w-full h-auto object-cover border-4 border-white aspect-[4/5] object-top">
+                    
+                    <!-- Floating badge -->
+                    <div class="absolute -bottom-6 -left-6 md:-left-10 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-4 animate-bounce" style="animation-duration: 3s;">
+                        <div class="bg-green-100 p-3 rounded-full text-green-600">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900 text-sm md:text-base">5.0 Estrelas</p>
+                            <p class="text-xs md:text-sm text-gray-500">Avaliações no Google</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Background decorative blobs -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-72 h-72 bg-blush-200 rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 bg-wine-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+    </section>
+
+    <section id="sobre" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col-reverse lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="gerlane5.png" alt="Clínica Instagram" class="rounded-2xl shadow-lg w-full h-64 object-cover object-center">
+                        <img src="gerlane7.png" alt="Procedimento" class="rounded-2xl shadow-lg w-full h-64 object-contain object-center mt-8 bg-blush-50">
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-[2px] bg-wine-600"></div>
+                        <span class="text-wine-600 font-semibold uppercase tracking-wider text-sm">Sobre Mim</span>
+                    </div>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-6">Prazer, sou <span class="text-wine-600">Gerlane Silva</span></h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                        Sou especialista em estética avançada e harmonização facial e corporal. Minha missão é proporcionar resultados que elevam a autoestima das minhas pacientes, priorizando sempre a <strong>segurança, a técnica e a naturalidade</strong>.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed text-lg">
+                        Na Clínica Gerlane Silva, cada protocolo é cuidadosamente personalizado para atender às suas necessidades únicas, oferecendo uma experiência acolhedora desde o primeiro momento. Seja para preparar a pele para o dia do seu casamento ou para cuidar de si mesma no dia a dia, estou aqui para cuidar de você.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-wine-600 mt-1"></i>
+                            <span class="text-gray-700 font-medium">Equipamentos Modernos</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-wine-600 mt-1"></i>
+                            <span class="text-gray-700 font-medium">Protocolos Exclusivos</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-wine-600 mt-1"></i>
+                            <span class="text-gray-700 font-medium">Produtos Premium</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-wine-600 mt-1"></i>
+                            <span class="text-gray-700 font-medium">Atendimento Humanizado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-20 bg-blush-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-wine-600 font-semibold uppercase tracking-wider text-sm mb-2 block">O que oferecemos</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-4">Procedimentos Estéticos</h2>
+                <p class="text-gray-600 text-lg">Tratamentos de alta performance para rosto e corpo, focados em resultados reais e no seu bem-estar.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-blush-100 text-wine-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-wine-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-hands-bubbles"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Drenagem Linfática</h3>
+                    <p class="text-gray-500 mb-6 text-sm">Massagem terapêutica que reduz retenção de líquidos, elimina toxinas e modela o corpo, ideal no pré e pós-operatório ou pré-eventos.</p>
+                    <a href="https://wa.me/5581987273399" data-procedure="Drenagem Linfática" target="_blank" class="inline-flex items-center gap-2 text-wine-600 font-semibold hover:text-wine-700 transition-colors">Tenho interesse <i class="fa-solid fa-arrow-right text-sm"></i></a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-blush-100 text-wine-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-wine-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-child-reaching"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Lipocavitação</h3>
+                    <p class="text-gray-500 mb-6 text-sm">A "lipo sem cortes". Procedimento ultrassônico eficaz na redução de gordura localizada e melhora do contorno corporal.</p>
+                    <a href="https://wa.me/5581987273399" data-procedure="Lipocavitação" target="_blank" class="inline-flex items-center gap-2 text-wine-600 font-semibold hover:text-wine-700 transition-colors">Tenho interesse <i class="fa-solid fa-arrow-right text-sm"></i></a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-blush-100 text-wine-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-wine-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-wave-square"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Radiofrequência</h3>
+                    <p class="text-gray-500 mb-6 text-sm">Combate à flacidez, estimulando intensamente a produção de colágeno e elastina para uma pele mais firme e jovem.</p>
+                    <a href="https://wa.me/5581987273399" data-procedure="Radiofrequência" target="_blank" class="inline-flex items-center gap-2 text-wine-600 font-semibold hover:text-wine-700 transition-colors">Tenho interesse <i class="fa-solid fa-arrow-right text-sm"></i></a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-blush-100 text-wine-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-wine-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-snowflake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Criolipólise</h3>
+                    <p class="text-gray-500 mb-6 text-sm">Tratamento inovador que congela e destrói as células de gordura, promovendo perda de medidas expressiva.</p>
+                    <a href="https://wa.me/5581987273399" data-procedure="Criolipólise" target="_blank" class="inline-flex items-center gap-2 text-wine-600 font-semibold hover:text-wine-700 transition-colors">Tenho interesse <i class="fa-solid fa-arrow-right text-sm"></i></a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-blush-100 text-wine-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-wine-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-syringe"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Botox</h3>
+                    <p class="text-gray-500 mb-6 text-sm">Toxina botulínica para suavizar rugas e linhas de expressão, mantendo a naturalidade dos seus traços.</p>
+                    <a href="https://wa.me/5581987273399" data-procedure="Botox" target="_blank" class="inline-flex items-center gap-2 text-wine-600 font-semibold hover:text-wine-700 transition-colors">Tenho interesse <i class="fa-solid fa-arrow-right text-sm"></i></a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-blush-100 text-wine-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-wine-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-pen-nib"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Microagulhamento</h3>
+                    <p class="text-gray-500 mb-6 text-sm">Estimulação de colágeno através de microagulhas. Excelente para cicatrizes de acne, manchas, estrias e rejuvenescimento.</p>
+                    <a href="https://wa.me/5581987273399" data-procedure="Microagulhamento" target="_blank" class="inline-flex items-center gap-2 text-wine-600 font-semibold hover:text-wine-700 transition-colors">Tenho interesse <i class="fa-solid fa-arrow-right text-sm"></i></a>
+                </div>
+
+                <!-- Service 7 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-blush-100 text-wine-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-wine-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Peeling de Algas</h3>
+                    <p class="text-gray-500 mb-6 text-sm">Renovação celular profunda e 100% natural, promovendo uma pele iluminada, controle de oleosidade e clareamento.</p>
+                    <a href="https://wa.me/5581987273399" data-procedure="Peeling de Algas" target="_blank" class="inline-flex items-center gap-2 text-wine-600 font-semibold hover:text-wine-700 transition-colors">Tenho interesse <i class="fa-solid fa-arrow-right text-sm"></i></a>
+                </div>
+                
+                <!-- CTA Card -->
+                <div class="bg-wine-600 rounded-2xl p-8 shadow-xl flex flex-col justify-center items-center text-center transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-bold text-white mb-4">Qual o melhor tratamento para você?</h3>
+                    <a href="https://wa.me/5581987273399" target="_blank" class="bg-white text-wine-600 w-full py-3 rounded-full font-bold hover:bg-blush-100 transition-colors">
+                        Agendar Avaliação
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="diferenciais" class="py-16 bg-white border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+                
+                <div class="p-6 text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blush-100 text-wine-600 mb-4">
+                        <i class="fa-solid fa-heart text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-900 mb-2">Tratamento Humanizado</h3>
+                    <p class="text-gray-500 text-sm">Cuidado genuíno e escuta ativa para entender seus objetivos reais.</p>
+                </div>
+
+                <div class="p-6 text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blush-100 text-wine-600 mb-4">
+                        <i class="fa-solid fa-couch text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-900 mb-2">Clínica Aconchegante</h3>
+                    <p class="text-gray-500 text-sm">Um ambiente preparado para o seu conforto, relaxamento e privacidade.</p>
+                </div>
+
+                <div class="p-6 text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blush-100 text-wine-600 mb-4">
+                        <i class="fa-regular fa-clock text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-900 mb-2">Hora Marcada</h3>
+                    <p class="text-gray-500 text-sm">Respeito rigoroso ao seu tempo, garantindo atendimento sem filas.</p>
+                </div>
+
+                <div class="p-6 text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blush-100 text-wine-600 mb-4">
+                        <i class="fa-solid fa-tags text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-900 mb-2">Preço Justo</h3>
+                    <p class="text-gray-500 text-sm">Transparência e excelente custo-benefício em procedimentos de alta qualidade.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="py-20 bg-wine-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <i class="fa-solid fa-quote-right text-4xl text-wine-400 mb-4 opacity-50"></i>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">O que dizem nossas clientes</h2>
+                <p class="text-wine-100 text-lg">Experiências reais de quem confiou em nosso trabalho.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white text-gray-800 p-8 rounded-2xl shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-yellow-400 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic mb-6">"Otima experiência. Excelente atendimento. Fiz 3 massagens (2 linfaticas modeladoras pro corpo e uma pro rosto) antes do meu casamento e simplesmente AMEI o trabalho da Gerlane. Foi a primeira vez que vi resultados tao rapidos! Fiquei muito satisfeita. Com certeza voltarei na clinica..."</p>
+                    </div>
+                    <div class="flex items-center gap-4 border-t border-gray-100 pt-4">
+                        <div class="w-10 h-10 bg-blush-200 rounded-full flex items-center justify-center text-wine-600 font-bold text-xl">
+                            N
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Neka Torreiro de Moraes</h4>
+                            <p class="text-xs text-gray-500">Cliente Google</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white text-gray-800 p-8 rounded-2xl shadow-xl flex flex-col justify-between transform md:-translate-y-4">
+                    <div>
+                        <div class="flex text-yellow-400 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic mb-6">"Uma ótima profissional. Muito educada, comprometida com os horários e o espaço é confortável. Vim pelo Google, adorei conhecê-la, já virei cliente :)"</p>
+                    </div>
+                    <div class="flex items-center gap-4 border-t border-gray-100 pt-4">
+                        <div class="w-10 h-10 bg-blush-200 rounded-full flex items-center justify-center text-wine-600 font-bold text-xl">
+                            M
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Maria Eduarda de Moura</h4>
+                            <p class="text-xs text-gray-500">Cliente Google</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white text-gray-800 p-8 rounded-2xl shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-yellow-400 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic mb-6">"Foi uma experiência maravilhosa. Desde o atendimento para marcar até a a realização do procedimento. Diferencial que achei foi o tratamento humanizado, clínica aconchegante, atendimento por hora marcada e preço justo. Super indico e voltarei mais vezes."</p>
+                    </div>
+                    <div class="flex items-center gap-4 border-t border-gray-100 pt-4">
+                        <div class="w-10 h-10 bg-blush-200 rounded-full flex items-center justify-center text-wine-600 font-bold text-xl">
+                            Z
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Zivonaldo Galvao</h4>
+                            <p class="text-xs text-gray-500">Cliente Google</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="https://wa.me/5581987273399" target="_blank" class="inline-flex items-center gap-2 text-white font-medium hover:text-blush-200 transition-colors">
+                    Torne-se uma de nossas clientes satisfeitas <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-20 bg-blush-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    
+                    <!-- Contact Info -->
+                    <div class="p-10 md:p-16">
+                        <h2 class="font-serif text-3xl font-bold text-gray-900 mb-8">Onde Estamos</h2>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-blush-100 rounded-full flex items-center justify-center text-wine-600 flex-shrink-0 mt-1">
+                                    <i class="fa-solid fa-location-dot text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">Endereço</h4>
+                                    <p class="text-gray-600 mt-1">Empresarial Cordoba<br>Av. Conselheiro Rosa e Silva, 670<br>Espinheiro, Recife - PE<br>CEP: 52020-220</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-blush-100 rounded-full flex items-center justify-center text-wine-600 flex-shrink-0 mt-1">
+                                    <i class="fa-solid fa-phone text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">Telefone / WhatsApp</h4>
+                                    <a href="https://wa.me/5581987273399" target="_blank" class="text-gray-600 mt-1 hover:text-wine-600 transition-colors block">(81) 98727-3399</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-blush-100 rounded-full flex items-center justify-center text-wine-600 flex-shrink-0 mt-1">
+                                    <i class="fa-solid fa-clock text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">Horário de Funcionamento</h4>
+                                    <table class="text-sm text-gray-600 mt-2">
+                                        <tbody>
+                                            <tr><td class="pr-4 py-1">Segunda-feira</td><td class="font-medium text-gray-900">09:00 – 19:00</td></tr>
+                                            <tr><td class="pr-4 py-1">Terça a Sexta</td><td class="font-medium text-gray-900">08:00 – 19:00</td></tr>
+                                            <tr><td class="pr-4 py-1">Sábado</td><td class="font-medium text-gray-900">08:00 – 15:00</td></tr>
+                                            <tr><td class="pr-4 py-1">Domingo</td><td class="text-wine-600 font-medium">Fechado</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-10">
+                            <a href="https://wa.me/5581987273399" target="_blank" class="w-full bg-wine-600 hover:bg-wine-700 text-white px-6 py-4 rounded-xl font-bold transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-xl"></i> Falar com a Clínica
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="h-96 lg:h-auto min-h-[400px] w-full bg-gray-200">
+                        <!-- Standard Google Maps Embed for the specific address -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.4851216091396!2d-34.8988697!3d-8.0519106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18ebd8a43657%3A0xcf95a52cd9ec85f5!2sAv.%20Conselheiro%20Rosa%20e%20Silva%2C%20670%20-%20Espinheiro%2C%20Recife%20-%20PE%2C%2052020-220!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-spa text-wine-500 text-2xl"></i>
+                    <span class="font-serif text-xl font-bold text-white">Gerlane Silva</span>
+                </div>
+                
+                <p class="text-sm text-center md:text-left text-gray-400">
+                    &copy; 2026 Clínica Gerlane Silva. Todos os direitos reservados.
+                </p>
+
+                <div class="flex gap-4">
+                    <a href="https://instagram.com/gerlanesilva.clinica" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-wine-600 hover:text-white transition-colors">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/5581987273399" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-wine-600 hover:text-white transition-colors">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp CTA -->
+    <a href="https://wa.me/5581987273399" target="_blank" class="fixed bottom-6 right-6 md:bottom-8 md:right-8 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#128C7E] transition-all duration-300 z-50 flex items-center justify-center group transform hover:scale-110" aria-label="Fale conosco no WhatsApp">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <!-- Tooltip -->
+        <span class="absolute right-full mr-4 bg-gray-900 text-white text-sm py-2 px-4 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none hidden md:block">
+            Agende seu horário
+            <!-- triangle arrow -->
+            <span class="absolute top-1/2 -right-1 transform -translate-y-1/2 border-t-4 border-b-4 border-l-4 border-transparent border-l-gray-900"></span>
+        </span>
+    </a>
+
+    <script>
+        // Personalize a mensagem do WhatsApp com o procedimento escolhido
+        const procedureLinks = document.querySelectorAll('[data-procedure]');
+        procedureLinks.forEach(link => {
+            const procedure = link.dataset.procedure;
+            const message = `Olá! Gostaria de agendar uma avaliação para o procedimento de ${procedure}. Poderiam me passar mais informações e os horários disponíveis?`;
+            link.href = `https://wa.me/5581987273399?text=${encodeURIComponent(message)}`;
+        });
+
+        // Mobile menu toggle logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar shadow effect on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('shadow-sm', 'bg-white/95');
+                navbar.classList.add('bg-white/100');
+            } else {
+                navbar.classList.remove('shadow-md', 'bg-white/100');
+                navbar.classList.add('shadow-sm', 'bg-white/95');
+            }
+        });
+    </script>
+</body>
+</html>
